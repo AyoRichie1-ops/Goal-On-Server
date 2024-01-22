@@ -15,7 +15,7 @@ const {
 
 router.route('/').get(getAllGoals).post(createGoal)
 
-router.route('/:goalsId').get(getAGoal).patch(updateGoal).delete(deleteGoal)
+router.route('/:goalId').get(getAGoal).patch(updateGoal).delete(deleteGoal)
 
 // router.get("/api/goals/:goalId", getAGoal)
 // router.patch("/api/goals/:goalId", updateGoal)

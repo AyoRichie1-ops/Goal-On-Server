@@ -27,7 +27,7 @@ const createGoal = async (req, res) => {
     }
     try {
     const goals = await GOALS.create(req.body)
-    res.status(200).json({goals, success: true})
+    res.status(201).json({goals, success: true})
    } catch (error) {
     res.json(error)
     console.log(error);
