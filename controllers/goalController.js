@@ -1,8 +1,9 @@
  const GOALS = require("../models/goalsmodel")
 
 const getAllGoals = async (req, res) => {
+// sort arranges them
     try {
-        const goals = await GOALS.find()
+        const goals = await GOALS.find([]).sort("-createdAt")
         res.status(200).json({numOfGoals: goals.length, goals, success: true})
     } catch (error) {
         res.json(error)
